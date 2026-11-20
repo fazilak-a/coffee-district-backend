@@ -1,0 +1,143 @@
+
+  -- one-time batching
+
+      -- COFFEES
+
+   -- Colombian Gold
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Colombian Gold', 'colombian-gold', 'Best-Seller', 'Colombian Roasters', 'Colombia',25.30,'Dense roast and fruity.',25, '/assets/images/products/sample-colombian-gold.png','COFFEE', NOW());
+
+    INSERT INTO coffee (id, region, aroma, body, weight_per_bag, caffeine)
+    VALUES (LAST_INSERT_ID(), 'Colombia', 'Fruity', 'Medium', 250, TRUE);
+
+
+   -- Brazilian Sunrise
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Brazilian Sunrise', 'brazilian-sunrise', 'New Arrival','Amazonia Roastery', 'Brazil', 19.20, 'Bright acidity with berry notes.', 18, '/assets/images/products/sample-brazilian-sunrise.png', 'COFFEE', NOW());
+
+    INSERT INTO coffee (id, region, aroma, body, weight_per_bag, caffeine)
+    VALUES (LAST_INSERT_ID(), 'Brazil', 'Berry', 'Light', 250, TRUE);
+
+
+-- African Diamond
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('African Diamond', 'african-diamond', 'New Arrival', 'Dense Beans Roastery', 'South Africa', 29.20, 'Balanced taste with chocolate notes.', 40, '/assets/images/products/sample-african-diamond.png', 'COFFEE', NOW());
+
+    INSERT INTO coffee (id, region, aroma, body, weight_per_bag, caffeine)
+    VALUES (LAST_INSERT_ID(), 'South Africa', 'Chocolate', 'Full', 250, TRUE);
+
+
+  -- Kenya Robust
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Kenya Robust', 'kenya-robust', 'Our Choice', 'Bean Supreme', 'Kenya', 19.60, 'flavorful bright notes with berry undertones.', 50, '/assets/images/products/sample-kenya-robust.png',  'COFFEE', NOW());
+
+    INSERT INTO coffee (id, region, aroma, body, weight_per_bag, caffeine)
+    VALUES (LAST_INSERT_ID(), 'Kenya', 'Berry', 'Medium', 250, TRUE);
+
+
+
+   -- Guatemalan Exotic
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Guatemalan Exotic', 'guatemalan-exotic', 'Promotion', 'Caribbean Beans', 'Guatemala', 18.80, 'Full body with rich chocolate depth undertones.', 55, '/assets/images/products/sample-guatemalan-exotic.png', 'COFFEE', NOW());
+
+    INSERT INTO coffee (id, region, aroma, body, weight_per_bag, caffeine)
+    VALUES (LAST_INSERT_ID(), 'Guatemala', 'Chocolate', 'Full', 250, TRUE);
+
+
+-- COOKIES
+
+-- Chocolate Chunk
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Chocolate Chunk', 'chocolate-chunk', 'Best-Seller', 'Sweet & Crisp Co.', 'Portugal', 7.50, 'Rich dark chocolate chunks in a soft-baked cookie.', 60, '/assets/images/products/sample-chocolate-chunk.png', 'COOKIES', NOW());
+
+    INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+    VALUES (LAST_INSERT_ID(), 'Chocolate', 8, 'Gluten, Milk, Soy');
+
+
+   -- Belgian Butter
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Belgian Butter', 'belgian-butter', 'Classic', 'Pâtisserie Linier.', 'Belgium', 9.80, 'Traditional butter cookies with a delicate crumb.', 45, '/assets/images/products/sample-belgian-butter.png', 'COOKIES', NOW());
+
+    INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+    VALUES (LAST_INSERT_ID(), 'Butter', 10, 'Gluten, Milk, Eggs');
+
+
+-- Hazelnut Crunch
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Hazelnut Crunch', 'hazelnut-crunch', 'New Arrival', 'Sicilian Bakery', 'Italy', 11.20, 'Crunchy cookies packed with roasted hazelnuts.', 30, '/assets/images/products/sample-hazelnut-crunch.png', 'COOKIES', NOW());
+
+    INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+    VALUES (LAST_INSERT_ID(), 'Hazelnut', 8, 'Gluten, Nuts, Milk');
+
+    -- Almond Nougat
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Almond Nougat', 'almond-nougat', 'Limited Edition', 'Golden Crumb Bakery', 'Spain', 7.50, 'Chewy nougat cookies with roasted almond pieces.', 25, '/assets/images/products/sample-almond-nougat.png', 'COOKIES', NOW());
+
+    INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+    VALUES (LAST_INSERT_ID(), 'Almond', 8, 'Gluten, Nuts, Eggs');
+
+
+
+    -- Peanut Crisp
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Peanut Crisp', 'peanut-crisp', 'Best-Seller', 'Sweet Oven Co.', 'Portugal', 6.90, 'Crisp cookies with a bold roasted peanut flavor.', 70, '/assets/images/products/sample-peanut-crisp.png', 'COOKIES', NOW());
+
+    INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+    VALUES (LAST_INSERT_ID(), 'Peanut', 10, 'Gluten, Peanuts');
+
+
+
+   -- Coffee Deluxe
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Coffee Deluxe', 'coffee-deluxe', 'Hot Pick', 'Sicilian Bakery', 'Italy', 11.50, 'Fudgy cookies with an intense coffee flavor.', 15, '/assets/images/products/sample-coffee-deluxe.png', 'COOKIES', NOW());
+
+    INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+    VALUES (LAST_INSERT_ID(), 'Coffee', 10, 'Gluten');
+
+
+
+  -- Basil Crackers
+   INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+   VALUES ('Basil Crackers', 'basil-crackers', 'Limited Edition', 'Sicilian Bakery', 'Italy', 9.30, 'Addictive on their own, but pair well with dips and cheese.', 12, '/assets/images/products/sample-basil-crackers.png', 'COOKIES', NOW());
+
+   INSERT INTO cookie (id, main_flavour, quantity_per_packet, allergens)
+   VALUES (LAST_INSERT_ID(), 'Basil', 25, 'Gluten');
+
+
+
+
+
+-- MACHINERY
+
+
+   -- District Barista X
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('District Barista X', 'district-barista-x', 'Premium', 'District Machines', 'Italy', 549.00, 'Semi-automatic espresso machine with dual boiler system.', 5, '/assets/images/products/district-barista-x.jpg', 'MACHINERY', NOW());
+
+    INSERT INTO machine (id, dimensions, capacity_liters, voltage, color, warranty_months)
+    VALUES (LAST_INSERT_ID(), '38 x 32 x 40 cm', 2.5, 220, 'Stainless Steel', 24);
+
+
+   -- Urban Grind
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('Urban Grind', 'urban-grind', 'Best-Seller', 'District Machines', 'Germany', 154.80, 'Conical burr grinder with 15 grind settings.', 20, '/assets/images/products/urban-grind.jpg', 'MACHINERY', NOW());
+
+    INSERT INTO machine (id, dimensions, capacity_liters, voltage, color, warranty_months)
+    VALUES (LAST_INSERT_ID(), '14 x 20 x 38 cm', 0.35, 220, 'Matte Black', 12);
+
+
+    -- French Press Pro
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('French Press Pro', 'french-press-pro', 'Classic', 'Brews & Co.', 'France', 31.20, 'Glass French press with stainless mesh filter.', 35, '/assets/images/products/french-press-pro.jpg', 'MACHINERY', NOW());
+
+    INSERT INTO machine (id, dimensions, capacity_liters, voltage, color, warranty_months)
+    VALUES (LAST_INSERT_ID(), '12 x 12 x 22 cm', 1.0, 0, 'Clear Glass', 6);
+
+
+    -- X100 Ceramic Dripper
+    INSERT INTO product (title, slug, tag, brand, country, price, description, stock, image_url, category, created_at)
+    VALUES ('X100 Ceramic Dripper', 'x100-ceramic-dripper', 'New Arrival', 'Brew Gears', 'Japan', 27.50, 'Handcrafted ceramic pour-over dripper for a clean brew.', 40, '/assets/images/products/x100-ceramic-dripper.jpg', 'MACHINERY', NOW());
+
+    INSERT INTO machine (id, dimensions, capacity_liters, voltage, color, warranty_months)
+    VALUES (LAST_INSERT_ID(), '11 x 11 x 9 cm', 0.5, 0, 'White', 6);
+
